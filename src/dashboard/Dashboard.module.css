@@ -3,3 +3,13 @@
     border: 1px solid var(--sub-border-color); 
     padding: 16px;
 }
+
+.dashboardData{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 16px 0px;
+}

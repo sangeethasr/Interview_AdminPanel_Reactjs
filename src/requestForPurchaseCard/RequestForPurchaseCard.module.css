@@ -1,0 +1,15 @@
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img{
+    height: 25px;
+    width: 25px;
+}
+
+.DashboardDataCard{
+    width: calc(50% - 8px);
+}
