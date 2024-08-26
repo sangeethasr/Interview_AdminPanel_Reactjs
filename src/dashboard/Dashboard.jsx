@@ -13,11 +13,11 @@ export default function Dashboard() {
       <div className={Design.dashboardDataContainer}>
         <div className={Design.dashboardData}>
           <RequestForPurchaseCard />
-          <EmptyDashboardCards />
+          <EmptyDashboardCards title={"Upcoming Tasks"}/>
         </div>
         <div className={Design.dashboardData}>
-          <EmptyDashboardCards />
-          <EmptyDashboardCards />
+          <EmptyDashboardCards title={"Upcoming Events"}/>
+          <EmptyDashboardCards title={"Net Income()"}/>
         </div>
       </div>
     </div>

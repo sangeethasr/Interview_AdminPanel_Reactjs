@@ -2,6 +2,8 @@
 .Sidebar{
     width: 15rem;
     height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .logoContainer{

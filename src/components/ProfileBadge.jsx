@@ -8,8 +8,8 @@ export default function ProfileBadge() {
   return (
     <div className={Design.userProfileBadge}>
       <div className={Design.userProfileInfo}>
-        <h4>Ms.Employee</h4>
-        <p>Product Manager</p>
+        <h4 className="primaryHeading">Ms.Employee</h4>
+        <p className="secondaryText">Product Manager</p>
       </div>
       <Avatar size={40} icon={<UserOutlined />} />
     </div>

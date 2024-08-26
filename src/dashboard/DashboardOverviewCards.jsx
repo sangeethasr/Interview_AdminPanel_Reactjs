@@ -9,9 +9,9 @@ export default function DashboardOverviewCards() {
       <Card className={Design.overviewCards}>
         <div className={Design.overviewCardsContent}>
           <div className={Design.employeeTurnoverRate}>
-            <h4 className={Design.secondaryCardText}>Employee Turnover Rate</h4>
-            <h2 className={Design.primaryCardText}>25%</h2>
-            <h4 className={Design.cardText}>Resignation in last 90 days: 0</h4>
+            <h4 className="primaryHeading">Employee Turnover Rate</h4>
+            <h2 className="primaryText">25%</h2>
+            <h4 className="secondaryText">Resignation in last 90 days: 0</h4>
           </div>
           <div>
             <DashboardOverviewCharts />
@@ -22,9 +22,9 @@ export default function DashboardOverviewCards() {
       <Card className={Design.overviewCards}>
         <div className={Design.overviewCardsContent}>
           <div className={Design.totalEmployeesRate}>
-            <h4 className={Design.secondaryCardText}>Total Employees</h4>
-            <h2 className={Design.primaryCardText}>123</h2>
-            <h4 className={Design.cardTextRow}>Men: 101 <div style={{height: "16px"}} class={Design.verticalLine}></div> Female: 22</h4>
+            <h4 className="primaryHeading">Total Employees</h4>
+            <h2 className="primaryText">123</h2>
+            <h4 className={Design.cardTextRow}><span className="secondaryText">Men: 101</span><div style={{height: "16px"}} class={Design.verticalLine}></div><span className="secondaryText">Female: 22</span></h4>
           </div>
           <div class={Design.verticalLine}></div>
           <div className={Design.employeesNumber}>
@@ -37,9 +37,9 @@ export default function DashboardOverviewCards() {
       <Card className={Design.overviewCards}>
         <div className={Design.overviewCardsContent}>
           <div className={Design.employeeTurnoverRate}>
-            <h4 className={Design.secondaryCardText}>Overall Attendance</h4>
-            <h2 className={Design.primaryCardText}>89%</h2>
-            <h4 className={Design.cardText}>Attendance Performance</h4>
+            <h4 className="primaryHeading">Overall Attendance</h4>
+            <h2 className="primaryText">89%</h2>
+            <h4 className="secondaryText">Attendance Performance</h4>
           </div>
           <div>
             <DashboardOverviewCharts />
