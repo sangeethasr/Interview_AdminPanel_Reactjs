@@ -1,0 +1,57 @@
+
+.Sidebar{
+    width: 15rem;
+    height: 100%;
+}
+
+.logoContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid var(--sub-border-color); 
+    padding: 5px 1px;
+    margin-bottom: 5px;
+}
+
+.logo{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.sidebarList{
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--sub-border-color); 
+    padding: 0px 1px;
+}
+
+.listHeading{
+    background-color: var(--sub-bg-color);
+    text-align: center;
+    color: white !important;
+}
+
+.sidebarList li{
+    padding: 8px 0px;
+    border-bottom: 1px solid var(--main-border-color); 
+    font-size: 12px;
+    color: var(--sub-text-color);
+}
+
+.sidebarList li:last-child {
+    border-bottom: none !important;
+}
+
+.sidebarMoreBtn{
+    color: var(--main-border-color); 
+}
+
+.sidebarContentLogo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
