@@ -12,7 +12,7 @@
     width: 33.33%;
     padding: 0px;
     flex: 1;
-    height: 100%;
+    height: 10rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,6 +20,8 @@
     -webkit-box-shadow: 14px 14px 40px -27px rgba(13, 110, 127, 0.72);
     -moz-box-shadow: 14px 14px 40px -27px rgba(13, 110, 127, 0.72);
     box-shadow: 14px 14px 40px -27px rgba(13, 110, 127, 0.72);
+    border-radius: 8px;
+    padding: 5px;
 }
 
 .overviewCardsContent {
@@ -67,6 +69,27 @@
     margin: 0px 10px;
 }
 
+.horizontalLine{
+    height: 2px;
+    width: 150px;
+    background-color: #1f1f1f;
+    margin: 10px 0px;
+    display: none;
+}
+
 .employeesNumber {
     width: 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .verticalLine{
+        display: none;
+    }
+    .overviewCards{
+        height: 15rem;
+    }
+    .overviewCardsContent{
+        width: 100%;
+        flex-direction: column;
+    }
 }
