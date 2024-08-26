@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "antd";
 import expandIcon from "../images/expandIcon.png";
+import RequestForPurchaseTable from "./RequestForPurchaseTable"
 import Design from "./RequestForPurchaseCard.module.css";
 
 export default function RequestForPurchaseCard() {
@@ -10,6 +11,7 @@ export default function RequestForPurchaseCard() {
           <h4>Request for Purchase</h4>
           <img src={expandIcon} alt="expandIcon" />
         </div>
+        <RequestForPurchaseTable />
       </Card>
   );
 }

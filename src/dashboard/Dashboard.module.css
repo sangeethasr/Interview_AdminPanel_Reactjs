@@ -2,9 +2,12 @@
 .dashboard{
     border: 1px solid var(--sub-border-color); 
     padding: 16px;
+    height: calc(100% - 135px);
+    overflow: scroll;
 }
 
 .dashboardData{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
