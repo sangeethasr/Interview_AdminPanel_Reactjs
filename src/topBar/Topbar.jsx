@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Badge, Avatar } from "antd";
 import {
   BellOutlined,
@@ -10,18 +11,22 @@ import Logo from "../images/dashboardLogo.png";
 import ProfileBadge from "../components/ProfileBadge";
 import SearchInput from "../components/SearchInput";
 import Design from "./Topbar.module.css";
+import { OPEN_NAVBAR } from "../store/actions/navBarActions";
 
-export default function Topbar() {
+function Topbar(props) {
   return (
     <div className={Design.topbar}>
-
       <div className={Design.mobileTopbar}>
-        <div className={Design.openSidebarBtn}>
+        <div
+          className={Design.openSidebarBtn}
+          onClick={() => {
+            props.onOpenNavBar(true, true);
+          }}
+        >
           <MenuOutlined />
         </div>
         <img src={Logo} className={Design.topbarLogo} />
       </div>
-
 
       <div className={Design.topbarActions}>
         <SearchInput />
@@ -51,3 +56,12 @@ export default function Topbar() {
     </div>
   );
 }
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onOpenNavBar: (openNavbar, click) =>
+      dispatch({ type: OPEN_NAVBAR, openNavbar, click }),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Topbar);

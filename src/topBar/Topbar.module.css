@@ -53,6 +53,7 @@
     }
     .openSidebarBtn{
         display: block;
+        cursor: pointer;
     }
 
     .ProfileBadgeContainer{

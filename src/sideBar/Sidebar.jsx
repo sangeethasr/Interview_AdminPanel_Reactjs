@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import Logo from "../images/dashboardLogo.png";
 import manageIcon from "../images/manageIcon.svg";
 import dotsIcon from "../images/dotsIcon.png";
@@ -6,16 +7,42 @@ import Design from "./Sidebar.module.css";
 import ProfileBadge from "../components/ProfileBadge";
 import SearchInput from "../components/SearchInput";
 import { CloseCircleOutlined } from "@ant-design/icons";
+import { ALWAYS_OPEN, CLOSE_NAVBAR, OPEN_NAVBAR } from "../store/actions/navBarActions";
 
-export default function Sidebar() {
+
+function Sidebar(props) {
+
+  const mediaQuery = window.matchMedia("(min-width: 992px)");
+  const handlemMediaQueryChanges = () => {
+    if (mediaQuery.matches) {
+      props.alwaysOpenNavbar(true, false);
+    } else if (!mediaQuery.matches && !props.click) {
+      props.onCloseNavBar(false, false);
+    }
+  };
+
+  handlemMediaQueryChanges();
+  mediaQuery.addListener(handlemMediaQueryChanges);
+
+  const sideBar = document.querySelector(`.${Design.Sidebar}`);
+  if (sideBar) {
+    if (props.openNavbar) {
+      sideBar.style.width = '15rem';
+    } else if (props.openNavbar && props.click) {
+      sideBar.style.width = '15rem';
+    } else if (!props.openNavbar && !props.click) {
+      sideBar.style.width = '0rem';
+    }
+  }
+
   return (
-    <div className={Design.Sidebar}>
+    <div className={Design.Sidebar}  style={{width : !props.click && !props.openNavbar ? "0px" : "15rem"}}>
 
       <div className={Design.profileSection}>
         <div>
           <ProfileBadge />
         </div>
-        <div className={Design.closeSidebarIcon}>
+        <div className={Design.closeSidebarIcon} onClick={()=>props.onCloseNavBar(false, false)}>
           <CloseCircleOutlined />
         </div>
       </div>
@@ -139,3 +166,20 @@ export default function Sidebar() {
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    openNavbar: state.navBarReducer.openNavbar,
+    click: state.navBarReducer.click,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onOpenNavBar: (openNavbar, click) => dispatch({ type: OPEN_NAVBAR, openNavbar, click }),
+    alwaysOpenNavbar: (openNavbar, click) => dispatch({ type: ALWAYS_OPEN, openNavbar, click }),
+    onCloseNavBar: (openNavbar, click) => dispatch({ type: CLOSE_NAVBAR, openNavbar, click }),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
