@@ -1,4 +1,15 @@
 
+
+:root {
+  --main-bg-color: #ffffff;
+  --sub-bg-color: #304384;
+  --main-border-color: #579ee0;
+  --sub-border-color: #d9eaf2;
+  --sub-text-color: #555a65;
+}
+
+/* App.css */
+
 .app{
   padding: 5px;
   position: fixed;
@@ -10,30 +21,22 @@
   flex-direction: row;
 }
 
-:root {
-  --main-bg-color: #ffffff;
-  --sub-bg-color: #304384;
-  --main-border-color: #579ee0;
-  --sub-border-color: #d9eaf2;
-  --sub-text-color: #555a65;
-}
-
 .content{
   width: calc(100% - 15rem);
   padding-left: 10px;
 }
 
+@media only screen and (max-width: 992px) {
+  .content{
+      width: 100%;
+      padding: 0;
+  }
+}
+
+/* Common classes */
+
 .horizontalLine{
   border: 0.5px solid var(--sub-border-color);
-}
-
-.ant-card, .ant-card-body {
-  padding: 10px !important;
-}
-
-.custom-table .ant-table-thead > tr > th {
-  background-color: var( --main-border-color); /* Change to your desired color */
-  color: #fff; /* Change text color if needed */
 }
 
 .primaryHeading{
@@ -58,4 +61,15 @@
   padding: 0;
   margin: 0;
   font-weight: 300;
+}
+
+/* Antd classes */
+
+.ant-card, .ant-card-body {
+  padding: 10px !important;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background-color: var( --main-border-color); /* Change to your desired color */
+  color: #fff; /* Change text color if needed */
 }
