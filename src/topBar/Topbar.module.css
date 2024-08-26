@@ -1,4 +1,17 @@
 
+.mobileTopbar{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbarLogo{
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
 .topbar{
     display: flex;
     flex-direction: row;
@@ -29,3 +42,26 @@
     font-size: 14px;
 }
 
+.ProfileBadgeContainer{
+    display: block;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .mobileTopbar{
+        display: flex;
+    }
+    .openSidebarBtn{
+        display: block;
+    }
+
+    .ProfileBadgeContainer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .topbarActions{
+        display: none;
+    }
+}
