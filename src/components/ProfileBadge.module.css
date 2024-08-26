@@ -1,0 +1,22 @@
+
+/* userProfileBadge */
+
+.userProfileBadge{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.userProfileInfo h4{
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 6px;
+    padding: 0;
+}
+
+.userProfileInfo p {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}

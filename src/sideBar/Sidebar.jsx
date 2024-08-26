@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../images/dashboardLogo.png";
+import Logo from "../images/dashboardLogo.png";
 import Design from "./Sidebar.module.css";
 
 export default function Sidebar() {

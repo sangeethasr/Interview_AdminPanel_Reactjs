@@ -1,0 +1,30 @@
+
+.topbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid var(--sub-border-color); 
+    height: 50px;
+}
+
+.topbarActions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.topbarAlerts{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.topbarAlerts{
+    font-size: 14px;
+}
