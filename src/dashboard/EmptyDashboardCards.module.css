@@ -15,4 +15,5 @@
     flex: 1 1 40%;
     box-sizing: border-box;
     min-height: 500px;
+    border: 1px solid var(--main-border-color);
 }

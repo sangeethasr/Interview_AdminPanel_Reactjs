@@ -53,7 +53,7 @@ const data = [
 export default function RequestForPurchaseTable() {
   return (
     <div>
-      <Table  columns={columns} dataSource={data} />
+      <Table className="custom-table" columns={columns} dataSource={data} />
     </div>
   );
 }

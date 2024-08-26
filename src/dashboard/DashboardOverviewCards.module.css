@@ -16,6 +16,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border: 1px solid #d6e7f8;
+    -webkit-box-shadow: 14px 14px 40px -27px rgba(13, 110, 127, 0.72);
+    -moz-box-shadow: 14px 14px 40px -27px rgba(13, 110, 127, 0.72);
+    box-shadow: 14px 14px 40px -27px rgba(13, 110, 127, 0.72);
 }
 
 .overviewCardsContent {
