@@ -22,3 +22,11 @@
   width: calc(100% - 15rem);
   padding-left: 10px;
 }
+
+.horizontalLine{
+  border: 0.5px solid var(--sub-border-color);
+}
+
+.ant-card, .ant-card-body {
+  padding: 10px !important;
+}
