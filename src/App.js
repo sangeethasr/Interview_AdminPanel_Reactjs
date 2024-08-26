@@ -1,11 +1,11 @@
 import "./App.css";
 import logo from "./logo.svg";
-import Navigationbar from "./components/navigationBar/Sidebar"
+import Sidebar from "./components/sidebar/Sidebar"
 
 function App() {
   return (
     <div className="app">
-      <Navigationbar />
+      <Sidebar />
     </div>
   );
 }
