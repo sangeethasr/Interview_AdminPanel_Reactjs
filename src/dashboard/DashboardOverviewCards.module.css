@@ -116,7 +116,7 @@
         flex-direction: column;
     }
     .overviewCards {
-        width: 100%;
+        width: 96%;
         flex-basis: unset;
         flex-shrink: unset;
         height: 12rem;

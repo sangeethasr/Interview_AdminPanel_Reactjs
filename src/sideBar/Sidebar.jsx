@@ -7,11 +7,20 @@ import Design from "./Sidebar.module.css";
 import ProfileBadge from "../components/ProfileBadge";
 import SearchInput from "../components/SearchInput";
 import { CloseCircleOutlined } from "@ant-design/icons";
-import { ALWAYS_OPEN, CLOSE_NAVBAR, OPEN_NAVBAR } from "../store/actions/navBarActions";
+import {
+  ALWAYS_OPEN,
+  CLOSE_NAVBAR,
+  OPEN_NAVBAR,
+} from "../store/actions/navBarActions";
+import { Badge, Avatar } from "antd";
 
+import {
+  BellOutlined,
+  MailOutlined,
+  QuestionCircleOutlined,
+} from "@ant-design/icons";
 
 function Sidebar(props) {
-
   const mediaQuery = window.matchMedia("(min-width: 992px)");
   const handlemMediaQueryChanges = () => {
     if (mediaQuery.matches) {
@@ -27,27 +36,41 @@ function Sidebar(props) {
   const sideBar = document.querySelector(`.${Design.Sidebar}`);
   if (sideBar) {
     if (props.openNavbar) {
-      sideBar.style.width = '15rem';
+      sideBar.style.width = "15rem";
     } else if (props.openNavbar && props.click) {
-      sideBar.style.width = '15rem';
+      sideBar.style.width = "15rem";
     } else if (!props.openNavbar && !props.click) {
-      sideBar.style.width = '0rem';
+      sideBar.style.width = "0rem";
     }
   }
 
   return (
-    <div className={Design.Sidebar}  style={{width : !props.click && !props.openNavbar ? "0px" : "15rem"}}>
-
+    <div
+      className={Design.Sidebar}
+      style={{ width: !props.click && !props.openNavbar ? "0px" : "15rem" }}
+    >
       <div className={Design.profileSection}>
         <div>
           <ProfileBadge />
         </div>
-        <div className={Design.closeSidebarIcon} onClick={()=>props.onCloseNavBar(false, false)}>
+        <div
+          className={Design.closeSidebarIcon}
+          onClick={() => props.onCloseNavBar(false, false)}
+        >
           <CloseCircleOutlined />
         </div>
       </div>
 
       <div className={Design.actionSection}>
+        <div className={Design.actionBadgeSection}>
+          <Badge count={99}>
+            <Avatar shape="circle" icon={<BellOutlined/>} size={26} />
+          </Badge>
+          <Badge count={99}>
+            <Avatar shape="circle" icon={<MailOutlined />} size={26}/>
+          </Badge>
+          <QuestionCircleOutlined style={{ fontSize: 24 }}/>
+        </div>
         <SearchInput />
       </div>
 
@@ -176,9 +199,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onOpenNavBar: (openNavbar, click) => dispatch({ type: OPEN_NAVBAR, openNavbar, click }),
-    alwaysOpenNavbar: (openNavbar, click) => dispatch({ type: ALWAYS_OPEN, openNavbar, click }),
-    onCloseNavBar: (openNavbar, click) => dispatch({ type: CLOSE_NAVBAR, openNavbar, click }),
+    onOpenNavBar: (openNavbar, click) =>
+      dispatch({ type: OPEN_NAVBAR, openNavbar, click }),
+    alwaysOpenNavbar: (openNavbar, click) =>
+      dispatch({ type: ALWAYS_OPEN, openNavbar, click }),
+    onCloseNavBar: (openNavbar, click) =>
+      dispatch({ type: CLOSE_NAVBAR, openNavbar, click }),
   };
 };
 
