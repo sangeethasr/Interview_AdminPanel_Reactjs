@@ -104,3 +104,27 @@
         gap: 5px;
     }
 }
+
+@media only screen and (max-width: 650px) {
+    .verticalLine{
+        display: block;
+    }
+    .horizontalLine{
+        display: none;
+    }
+    .DashboardOverviewCards{
+        flex-direction: column;
+    }
+    .overviewCards {
+        width: 100%;
+        flex-basis: unset;
+        flex-shrink: unset;
+        height: 12rem;
+    }
+    .overviewCardsContent{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}

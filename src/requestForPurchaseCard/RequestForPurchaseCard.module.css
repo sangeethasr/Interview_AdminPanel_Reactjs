@@ -12,12 +12,8 @@
 }
 
 .DashboardDataCard{
-    /* width: calc(50% - 8px); */
-    width: 50%;
-    flex: 1;
-    height: 500px;
-    max-height: 500px;
     border: 1px solid var(--main-border-color);
+    height: 100%;
     overflow: auto;
 }
 

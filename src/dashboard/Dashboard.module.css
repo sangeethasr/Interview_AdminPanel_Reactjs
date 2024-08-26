@@ -17,4 +17,25 @@
     margin: 16px 0px;
 }
 
+.dashboardDataCard{
+     width: 50%; 
+    flex: 1;
+    height: 500px;
+}
 
+@media only screen and (max-width: 650px) {
+
+    .dashboardDataContainer{
+        margin-top: 16px;
+    }
+
+    .dashboardData{
+        flex-direction: column;
+        gap: 16px;
+        margin: 16px 0px 0px 0px
+    }
+    .dashboardDataCard{
+        width: 100%;
+        height: auto;
+    }
+}
