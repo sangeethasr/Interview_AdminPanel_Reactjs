@@ -20,3 +20,11 @@
     margin: 0;
     padding: 0;
 }
+
+@media only screen and (max-width: 992px) {
+
+    .userProfileBadge{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
